@@ -73,7 +73,7 @@ function App() {
           placeholder="请输入你的问题"
         ></textarea>
         <button onClick={handleSubmit} disabled={loading}>
-          {loading ? '提交中...' : '提交'}
+          {loading ? '提交中... 请耐心等待' : '提交'}
         </button>
       </div>
       <div className="answer-container">
