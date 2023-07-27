@@ -23,7 +23,7 @@ function App() {
     const data = {
       "model": "gpt-3.5-turbo",
       "query": question,
-      "libraryId": 10069,
+      "libraryId": process.env.REACT_APP_LIB_ID,
       "stream": false
     };
 
