@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 
 const API_URL = "https://api.tweb.one/api/library/ask";
-const API_KEY = "";
 
 function App() {
   const [question, setQuestion] = useState('');
@@ -18,7 +17,7 @@ function App() {
 
     const headers = {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${API_KEY}`
+      "Authorization": `Bearer ${process.env.API_KEY}`
     };
 
     const data = {
