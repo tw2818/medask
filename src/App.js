@@ -17,7 +17,7 @@ function App() {
 
     const headers = {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${process.env.API_KEY}`
+      "Authorization": `Bearer ${process.env.REACT_APP_API_KEY}`
     };
 
     const data = {
