@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 
 const API_URL = "https://api.tweb.one/api/library/ask";
-const API_KEY = "";
 
 function App() {
   const [question, setQuestion] = useState('');
@@ -18,13 +17,13 @@ function App() {
 
     const headers = {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${API_KEY}`
+      "Authorization": `Bearer ${process.env.REACT_APP_API_KEY}`
     };
 
     const data = {
       "model": "gpt-3.5-turbo",
       "query": question,
-      "libraryId": 10069,
+      "libraryId": process.env.REACT_APP_LIB_ID,
       "stream": false
     };
 
@@ -45,7 +44,7 @@ function App() {
 
         const titles = documents.map(document => document.title);
 
-        const output = answer + "\n" + "[参考书籍]:" + "\n" + titles.join("\n");
+        const output = answer + "\n" + "[参考文献]:" + "\n" + titles.join("\n");
         setAnswer(output);
         setLoading(false);
 
@@ -74,7 +73,7 @@ function App() {
           placeholder="请输入你的问题"
         ></textarea>
         <button onClick={handleSubmit} disabled={loading}>
-          {loading ? '提交中...' : '提交'}
+          {loading ? '提交中... 请耐心等待' : '提交'}
         </button>
       </div>
       <div className="answer-container">
@@ -86,7 +85,7 @@ function App() {
           style={{ height: "auto", resize: "none" }}
         ></textarea>
       </div>
-      <div style={{ color: 'gray', fontSize: '12px' }}>答案仅供参考，测试阶段准确率不能达到100%</div>
+      <div style={{ color: 'gray', fontSize: '12px' }}>答案仅供参考，目前准确率不能达到100%，以后会不断优化</div>
       <div style={{ color: 'gray', fontSize: '12px' }}>作者邮箱: twebery1@gmail.com</div>
       <div style={{ color: 'gray', fontSize: '12px' }}>
         现已支持: 微生物学 药理学 诊断学 神经病学 外科学 病理学 医学遗传学 生理学 医学统计学 医学伦理学
