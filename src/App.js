@@ -21,7 +21,7 @@ function App() {
     };
 
     const data = {
-      "model": "gpt-3.5-turbo",
+      "model": process.env.REACT_APP_MODEL,
       "query": question,
       "libraryId": process.env.REACT_APP_LIB_ID,
       "stream": false
