@@ -63,7 +63,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>MedAsk<span style={{ color: 'gray', fontSize: '12px' }}> v0.0.1</span></h1>
+      <h1>MedAsk<span style={{ color: 'gray', fontSize: '12px' }}> Beta v0.0.5</span></h1>
       <p style={{ color: 'gray', fontSize: '12px' }}> 测试阶段 侵权联系删除</p>
       <div className="input-container">
         <textarea
