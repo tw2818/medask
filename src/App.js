@@ -85,11 +85,7 @@ function App() {
           style={{ height: "auto", resize: "none" }}
         ></textarea>
       </div>
-<<<<<<< HEAD
       <div style={{ color: 'gray', fontSize: '12px' }}>答案仅供参考，目前准确率不能达到100%，以后会不断优化</div>
-=======
-      <div style={{ color: 'gray', fontSize: '12px' }}>答案仅供参考，目前准确率不能达到100%，会不断优化</div>
->>>>>>> 1cf0f527c985b9b80aa31260ad104f99cd62d591
       <div style={{ color: 'gray', fontSize: '12px' }}>作者邮箱: twebery1@gmail.com</div>
       <div style={{ color: 'gray', fontSize: '12px' }}>
         现已支持: 微生物学 药理学 诊断学 神经病学 外科学 病理学 医学遗传学 生理学 医学统计学 医学伦理学
